@@ -24,7 +24,7 @@ const CardContainer = ({coffee, coffeesData, setCoffeesData}) => {
                 icon: "success"
               });
 
-              fetch(`http://localhost:5000/data/${_id}`, {
+              fetch(`https://coffee-server-eight-iota.vercel.app/data/${_id}`, {
                 method: 'DELETE'
               })
               .then(res => res.json())

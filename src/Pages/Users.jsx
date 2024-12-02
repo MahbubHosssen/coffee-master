@@ -7,7 +7,7 @@ const Users = () => {
     const [singleUser, setSingleUser] = useState(usersData)
 
     const handleUserDelete = (id) => {
-        fetch(`http://localhost:5000/users/${id}`, {
+        fetch(`https://coffee-server-eight-iota.vercel.app/users/${id}`, {
             method: 'DELETE'
         })
         .then(res => res.json())

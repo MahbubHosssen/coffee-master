@@ -15,7 +15,7 @@ const AddCoffee = () => {
 
         const user = {name, chef, supplier, taste, category, details, photo}
         // console.log(user)
-        fetch('http://localhost:5000/data', {
+        fetch('https://coffee-server-eight-iota.vercel.app/data', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

@@ -20,7 +20,7 @@ const UpdateCoffee = () => {
 
         const updateCoffee = {name, chef, supplier, taste, category, details, photo}
 
-        fetch(`http://localhost:5000/data/${_id}`, {
+        fetch(`https://coffee-server-eight-iota.vercel.app/data/${_id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json',

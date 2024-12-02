@@ -17,7 +17,7 @@ const Register = () => {
             setUser(result.user)
             const creationTime = result.user.metadata.creationTime
             const user = {name, email, creationTime}
-            fetch(`http://localhost:5000/users`, {
+            fetch(`https://coffee-server-eight-iota.vercel.app/users`, {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

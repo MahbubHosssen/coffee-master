@@ -16,7 +16,7 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/data')
+                loader: () => fetch('https://coffee-server-eight-iota.vercel.app/data')
             },
             {
                 path: '/signup',
@@ -29,12 +29,12 @@ const router = createBrowserRouter([
             {
                 path: '/users',
                 element: <Users></Users>,
-                loader: () => fetch('http://localhost:5000/users')
+                loader: () => fetch('https://coffee-server-eight-iota.vercel.app/users')
             },
             {
                 path: '/updateCoffee/:id',
                 element: <UpdateCoffee></UpdateCoffee>,
-                loader: ({params}) => fetch(`http://localhost:5000/data/${params.id}`)
+                loader: ({params}) => fetch(`https://coffee-server-eight-iota.vercel.app/data/${params.id}`)
             },
             {
                 path: '/details',
