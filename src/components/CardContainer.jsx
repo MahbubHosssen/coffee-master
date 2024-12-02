@@ -1,5 +1,6 @@
 import { FaEye } from "react-icons/fa";
 import { MdDelete, MdModeEdit } from "react-icons/md";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
@@ -33,7 +34,6 @@ const CardContainer = ({coffee, coffeesData, setCoffeesData}) => {
             }
             const filterData = coffeesData.filter(coffee => coffee._id !== id)
             setCoffeesData(filterData)
-
           });
     }
 
@@ -53,7 +53,7 @@ const CardContainer = ({coffee, coffeesData, setCoffeesData}) => {
                 </div>
                 <div className="join join-vertical">
                     <button className="btn join-item bg-[#D2B48C] text-lg text-white"><FaEye /></button>
-                    <button className="btn join-item bg-[#3C393B] text-xl text-white"><MdModeEdit /></button>
+                    <Link to={`/updateCoffee/${_id}`}><button className="btn join-item bg-[#3C393B] text-xl text-white"><MdModeEdit /></button></Link>
                     <button onClick={() => handleDelete(_id)} className="btn join-item bg-[#EA4744] text-xl text-white"><MdDelete /></button>
                 </div>
             </div>
