@@ -3,10 +3,12 @@ import Banner from "../components/Banner";
 import CardContainer from "../components/CardContainer";
 import CoffeeSection from "../components/CoffeeSection";
 import Follow from "../components/Follow";
+import { useState } from "react";
 
 const Home = () => {
-    const coffeesData = useLoaderData()
-    // console.log(data)
+    const coffees = useLoaderData()
+
+    const [coffeesData, setCoffeesData] = useState(coffees)
 
     return (
         <div>
@@ -16,7 +18,13 @@ const Home = () => {
             </div>
             <div className="grid grid-cols-2 w-10/12 mx-auto my-12 gap-6">
                 {
-                    coffeesData.map(coffee => <CardContainer key={coffee._id} coffee={coffee}></CardContainer>)
+                    coffeesData.map(coffee => 
+                        <CardContainer 
+                            key={coffee._id} 
+                            coffee={coffee} 
+                            coffeesData={coffeesData} 
+                            setCoffeesData={setCoffeesData}
+                        ></CardContainer>)
                 }
             </div>
             <div>
